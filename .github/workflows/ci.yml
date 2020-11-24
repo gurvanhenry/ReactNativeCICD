@@ -1,0 +1,13 @@
+name: 'CI'
+on:
+  push:
+    branches:
+      - master
+jobs:
+  install-lint-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        run: npm install
+        run: npm lint
+        run: npm test
