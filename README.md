@@ -23,11 +23,11 @@ Simple POC to define a CI CD process on react-native app.
   - auto sort and group import
   - prettier + eslint
 - unit test
-  - see [names.test.js](./src/services/names.test.js)
+  - see [names.test.js](./src/services/__tests__/names.test.js)
   - can be used with watcher to test on every change
   - jest
 - react render test
-  - see [App.test.js](./src/App.test.js)
+  - see [App.test.js](./src/__tests__/App.test.js)
   - render React component and validate that it render with no error
 - CI
   - build / test on every 'git push origin master'
