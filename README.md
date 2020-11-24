@@ -29,6 +29,9 @@ Simple POC to define a CI CD process on react-native app.
 - react render test
   - see [App.test.js](./src/__tests__/App.test.js)
   - render React component and validate that it render with no error
+- snapshot test
+  - see [Button.test.js](./src/components/__tests__/Button.test.js)
+  - create a serializable value of a react tree and check that its stay the same
 - CI
   - build / test on every 'git push origin master'
   - with github action
