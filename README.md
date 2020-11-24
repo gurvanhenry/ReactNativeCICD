@@ -42,6 +42,7 @@ Simple POC to define a CI CD process on react-native app.
   - create a serializable value of a react tree and check that its stay the same
 - e2e test
   - detox
+  - see [App.e2e.js](e2e/App.e2e.js)
 - CI
   - build / test on every 'git push origin master'
   - with github action
