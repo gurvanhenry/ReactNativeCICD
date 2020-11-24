@@ -19,7 +19,12 @@ export default function LoginScreen({ onSignIn }) {
     <View style={styles.container}>
       <Text style={styles.title}>Get in the party 🎂</Text>
       <Text style={styles.subtitle}>Who are you?</Text>
-      <TextInput style={styles.textInput} value={name} onChangeText={setName} />
+      <TextInput
+        testID="TextInput_name"
+        style={styles.textInput}
+        value={name}
+        onChangeText={setName}
+      />
       <Button title="Get in" onPress={handleSignInPressed} />
     </View>
   );
