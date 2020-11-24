@@ -21,4 +21,13 @@ module.exports = {
       },
     ],
   },
+  overrides: [
+    {
+      files: ['**/*.e2e.js'],
+      env: {
+        jest: true,
+      },
+    },
+  ],
+  ignorePatterns: ['coverage'],
 };
