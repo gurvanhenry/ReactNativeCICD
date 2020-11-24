@@ -148,7 +148,6 @@
 				AF0F2CE90598D0B7BDD1593F /* Pods-ReactNativeCICD-tvOSTests.debug.xcconfig */,
 				D406111D3D7E87C8DC02AD26 /* Pods-ReactNativeCICD-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};

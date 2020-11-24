@@ -11,6 +11,11 @@ Simple POC to define a CI CD process on react-native app.
 - `npm run test:update`
 - `npm run test:coverage`
 
+- `npm run e2e:build:ios`
+- `npm run e2e:build:android`
+- `npm run e2e:test:ios`
+- `npm run e2e:test:android`
+
 - `npm start`
 - `npm run ios`
 - `npm run android`
@@ -35,6 +40,8 @@ Simple POC to define a CI CD process on react-native app.
   - see [Button.test.js](src/components/__tests__/Button.test.js)
   - see [Button.test.js.snap](src/components/__tests__/__snapshots__/Button.test.js.snap)
   - create a serializable value of a react tree and check that its stay the same
+- e2e test
+  - detox
 - CI
   - build / test on every 'git push origin master'
   - with github action

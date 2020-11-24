@@ -11,7 +11,11 @@
     "test": "jest --verbose",
     "test:watch": "jest --verbose --watch",
     "test:update": "jest --verbose --coverage --updateSnapshot",
-    "test:coverage": "jest --coverage && open ./coverage/lcov-report/index.html"
+    "test:coverage": "jest --coverage && open ./coverage/lcov-report/index.html",
+    "e2e:build:ios": "detox build --configuration ios",
+    "e2e:build:android": "detox build --configuration android",
+    "e2e:test:ios": "detox test --configuration ios",
+    "e2e:test:android": "detox test --configuration android"
   },
   "dependencies": {
     "react": "16.13.1",
@@ -22,13 +26,37 @@
     "@babel/runtime": "^7.8.4",
     "@react-native-community/eslint-config": "^1.1.0",
     "babel-jest": "^25.1.0",
+    "detox": "^17.13.1",
     "eslint": "^6.5.1",
     "eslint-plugin-import": "^2.22.1",
-    "jest": "^25.1.0",
+    "jest": "^25.5.4",
+    "jest-circus": "^26.6.3",
     "metro-react-native-babel-preset": "^0.59.0",
     "react-test-renderer": "16.13.1"
   },
   "jest": {
     "preset": "react-native"
+  },
+  "detox": {
+    "testRunner": "jest",
+    "runnerConfig": "e2e/config.json",
+    "configurations": {
+      "ios": {
+        "type": "ios.simulator",
+        "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/ReactNativeCICD.app",
+        "build": "xcodebuild -workspace ios/ReactNativeCICD.xcworkspace -scheme ReactNativeCICD -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build",
+        "device": {
+          "type": "iPhone 11"
+        }
+      },
+      "android": {
+        "type": "android.emulator",
+        "binaryPath": "android/app/build/outputs/apk/debug/app-debug.apk",
+        "build": "cd android && ./gradlew app:assembleDebug assembleAndroidTest -DtestBuildType=debug && cd ..",
+        "device": {
+          "avdName": "Pixel_2_API_29"
+        }
+      }
+    }
   }
 }
