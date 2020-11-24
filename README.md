@@ -7,7 +7,7 @@ Simple POC to define a CI CD process on react-native app.
 - `npm install`
 
 - `npm test`
-- `npm test --watch`
+- `npm run test -- --watch`
 
 - `npm start`
 - `npm run ios`
