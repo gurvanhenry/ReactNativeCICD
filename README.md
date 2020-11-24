@@ -20,6 +20,7 @@ Simple POC to define a CI CD process on react-native app.
 
 - auto fix on save
   - format code + fix warning and error
+  - auto sort and group import
   - prettier + eslint
 - unit test
   - see [names.test.js](./src/services/names.test.js)
