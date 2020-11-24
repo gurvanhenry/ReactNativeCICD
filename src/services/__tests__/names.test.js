@@ -1,4 +1,4 @@
-import isValidName from './names';
+import isValidName from '../names';
 
 test('accept name with 3 letters like "tom"', () => {
   expect(isValidName('tom')).toBe(true);
