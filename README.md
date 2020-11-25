@@ -6,6 +6,15 @@ Simple POC to define a CI CD process on react-native app.
 
 - `npm install`
 
+- `npm start`
+- `npm run run-ios`
+- `npm run run-android`
+
+- `npm run build-android`
+
+- `npm run lint`
+- `npm run lint:fix`
+
 - `npm test`
 - `npm run test:watch`
 - `npm run test:update`
@@ -16,21 +25,17 @@ Simple POC to define a CI CD process on react-native app.
 - `npm run e2e:test:ios`
 - `npm run e2e:test:android`
 
-- `npm start`
-- `npm run run-ios`
-- `npm run run-android`
-
-- `npm run build-android`
-
-- `npm run lint`
-- `npm run lint:fix`
-
 ## this project includes
 
 - auto fix on save
   - format code + fix warning and error
   - auto sort and group import
   - prettier + eslint
+- build
+  - android
+    - apk generated in android/app/build/outputs/apk/{adults|kids}
+  - ios
+    - _todo_
 - unit test
   - see [names.test.js](src/services/__tests__/names.test.js)
   - can be used with watcher to test on every change
