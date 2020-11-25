@@ -47,3 +47,8 @@ Simple POC to define a CI CD process on react-native app.
   - build / test on every 'git push origin master'
   - with github action
   - see [ci.yml](.github/workflows/ci.yml)
+  - run e2e detox test (not finished)
+
+## misc
+
+- use `it.skip` and `it.only` in your test files
