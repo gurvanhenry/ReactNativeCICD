@@ -7,10 +7,13 @@ Simple POC to define a CI CD process on react-native app.
 - `npm install`
 
 - `npm start`
+
 - `npm run run-ios`
 - `npm run run-android`
+- `npm run run-android:kids`
 
 - `npm run build-android`
+- `npm run build-android:kids`
 
 - `npm run lint`
 - `npm run lint:fix`

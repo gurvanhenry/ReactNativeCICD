@@ -1,0 +1,25 @@
+name: 'build-android'
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build-android:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      
+      - run: npm install
+      
+      - run: npm run build-android
+      - run: npm run build-android:kids
+
+      - uses: actions/upload-artifact@v1
+        with:
+          name: app-adults-debug.apk
+          path: android/app/build/outputs/apk/adults/debug/app-adults-debug.apk
+
+      - uses: actions/upload-artifact@v1
+        with:
+          name: app-kids-debug.apk
+          path: android/app/build/outputs/apk/kids/debug/app-kids-debug.apk
