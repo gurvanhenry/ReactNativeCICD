@@ -1,4 +1,4 @@
-name: 'E2E android 2'
+name: 'e2e-android-2'
 on:
   push:
     branches:
