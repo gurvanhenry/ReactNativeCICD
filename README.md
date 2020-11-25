@@ -17,8 +17,10 @@ Simple POC to define a CI CD process on react-native app.
 - `npm run e2e:test:android`
 
 - `npm start`
-- `npm run ios`
-- `npm run android`
+- `npm run run-ios`
+- `npm run run-android`
+
+- `npm run build-android`
 
 - `npm run lint`
 - `npm run lint:fix`
@@ -47,7 +49,13 @@ Simple POC to define a CI CD process on react-native app.
   - build / test on every 'git push origin master'
   - with github action
   - see [ci.yml](.github/workflows/ci.yml)
-  - run e2e detox test (not finished)
+  - run e2e detox test _not finished_
+- 2 flavor(android)/schema(ios)
+  - default app is 'Party' for adult
+  - the second is 'Party kids'
+  - android diff : app name, app id, app icon
+  - ios diff : _not done yet_
+  - js diff :
 
 ## misc
 

@@ -137,6 +137,17 @@ android {
         testBuildType System.getProperty('testBuildType', 'debug')
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
     }
+	flavorDimensions "default"
+	productFlavors {
+        adults {
+            // applicationId => 'com.reactnativecicd'
+            resValue "string", "build_config_package", "com.reactnativecicd"
+        }
+        kids {
+            applicationIdSuffix '.kids' // applicationId => 'com.reactnativecicd.kids'
+            resValue "string", "build_config_package", "com.reactnativecicd"
+        }
+    }
     splits {
         abi {
             reset()
