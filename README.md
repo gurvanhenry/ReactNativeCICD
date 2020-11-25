@@ -54,10 +54,13 @@ Simple POC to define a CI CD process on react-native app.
   - detox
   - see [App.e2e.js](e2e/App.e2e.js)
 - CI
-  - build / test on every 'git push origin master'
   - with github action
-  - see [ci.yml](.github/workflows/ci.yml)
-  - run e2e detox test _not finished_
+  - [ci.yml](.github/workflows/ci.yml)
+    - JS build-lint-test on every 'git push origin master'
+  - [build-android.yml](.github/workflows/build-android.yml)
+    - generate 2 apk and store them
+  - [e2e-android.yml](.github/workflows/e2e-android.yml) 
+    - _not finished_
 - 2 app configs
   - 'Party' for adult and 'Party kids'
   - 'Party' is the default app config
