@@ -14,6 +14,8 @@ Simple POC to define a CI CD process on react-native app.
 
 - `npm run build-android`
 - `npm run build-android:kids`
+- `npm run build-android:release`
+- `npm run build-android:kids:release`
 
 - `npm run lint`
 - `npm run lint:fix`
@@ -59,7 +61,7 @@ Simple POC to define a CI CD process on react-native app.
     - JS build-lint-test on every 'git push origin master'
   - [build-android.yml](.github/workflows/build-android.yml)
     - generate 2 apk and store them
-  - [e2e-android.yml](.github/workflows/e2e-android.yml) 
+  - [e2e-android.yml](.github/workflows/e2e-android.yml)
     - _not finished_
 - 2 app configs
   - 'Party' for adult and 'Party kids'
@@ -77,3 +79,12 @@ Simple POC to define a CI CD process on react-native app.
 ## misc
 
 - use `it.skip` and `it.only` in your test files
+
+## backlog
+
+- [ ] e2e:ios script *xcodebuild did not work* 
+- [ ] build-ios script *xcodebuild did not work* 
+- [ ] publish-android (fastlane) *json google play setup did not work*
+- [ ] build-ios github workflow
+- [ ] publish-android
+- [ ] publish-ios

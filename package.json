@@ -9,6 +9,8 @@
     "run-ios": "react-native run-ios",
     "build-android": "cd android && ./gradlew assembleAdultsDebug",
     "build-android:kids": "cd android && ./gradlew assembleKidsDebug",
+    "build-android:release": "cd android && ./gradlew assembleAdultsRelease",
+    "build-android:kids:release": "cd android && ./gradlew assembleKidsRelease",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "test": "jest --verbose",
