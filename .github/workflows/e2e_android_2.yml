@@ -6,6 +6,7 @@ on:
 jobs:
   detox:
     name: Detox Tests
+    if: false
     runs-on: macOS-latest
     steps:
       - uses: actions/checkout@v2
