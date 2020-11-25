@@ -50,12 +50,18 @@ Simple POC to define a CI CD process on react-native app.
   - with github action
   - see [ci.yml](.github/workflows/ci.yml)
   - run e2e detox test _not finished_
-- 2 flavor(android)/schema(ios)
-  - default app is 'Party' for adult
-  - the second is 'Party kids'
-  - android diff : app name, app id, app icon
-  - ios diff : _not done yet_
-  - js diff :
+- 2 app configs
+  - 'Party' for adult and 'Party kids'
+  - 'Party' is the default app config
+  - android
+    - use flavor
+    - diff : app name, app id, app icon
+  - ios
+    - use schema
+    - diff : _not done yet_
+  - js
+    - use .env and .env.kids
+    - use Config.ENV
 
 ## misc
 

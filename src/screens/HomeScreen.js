@@ -7,7 +7,7 @@ import Button from '../components/Button';
 export default function HomeScreen({ name, onSignOut }) {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Welcome {name} 🥃</Text>
+      <Text style={styles.title}>Welcome {name}!</Text>
       <Image
         style={styles.image}
         source={{ uri: 'https://source.unsplash.com/random/200×200/?party' }}

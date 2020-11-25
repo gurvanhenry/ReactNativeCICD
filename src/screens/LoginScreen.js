@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Alert, StyleSheet, Text, TextInput, View } from 'react-native';
+import Config from 'react-native-config';
 
 import Button from '../components/Button';
 import isValidName from '../services/names';
@@ -15,9 +16,22 @@ export default function LoginScreen({ onSignIn }) {
       Alert.alert('Your name is not accepted 🙃');
     }
   }
+
+  function getWelcomeText() {
+    if (Config.ENV === 'adults') {
+      return 'Get in the party 🎂';
+    } else if (Config.ENV === 'kids') {
+      return 'Kids party 🧸';
+    } else {
+      return '';
+    }
+  }
+
+  const welcomeText = getWelcomeText();
+
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Get in the party 🎂</Text>
+      <Text style={styles.title}>{welcomeText}</Text>
       <Text style={styles.subtitle}>Who are you?</Text>
       <TextInput
         testID="TextInput_name"

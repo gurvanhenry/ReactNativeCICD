@@ -20,7 +20,7 @@ describe('Main', () => {
   it('accept me if I give a valid name', async () => {
     await element(by.id('TextInput_name')).typeText('Gurvan');
     await element(by.text('Get in')).tap();
-    await expect(element(by.text('Welcome Gurvan 🥃'))).toBeVisible();
+    await expect(element(by.text('Welcome Gurvan!'))).toBeVisible();
     await element(by.text('Leave')).tap();
     await expect(element(by.text('Who are you?'))).toBeVisible();
   });
