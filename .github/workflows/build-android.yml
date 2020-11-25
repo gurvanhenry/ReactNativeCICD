@@ -27,12 +27,14 @@ jobs:
           name: app-kids-debug.apk
           path: android/app/build/outputs/apk/kids/debug/app-kids-debug.apk
 
-      - uses: actions/upload-artifact@v1
-        with:
-          name: app-adults-release.apk
-          path: android/app/build/outputs/apk/adults/release/app-adults-release.apk
+      # keystore needed :-p
 
-      - uses: actions/upload-artifact@v1
-        with:
-          name: app-kids-release.apk
-          path: android/app/build/outputs/apk/kids/release/app-kids-release.apk
+      # - uses: actions/upload-artifact@v1
+      #   with:
+      #     name: app-adults-release.apk
+      #     path: android/app/build/outputs/apk/adults/release/app-adults-release.apk
+
+      # - uses: actions/upload-artifact@v1
+      #   with:
+      #     name: app-kids-release.apk
+      #     path: android/app/build/outputs/apk/kids/release/app-kids-release.apk
